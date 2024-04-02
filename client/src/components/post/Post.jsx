@@ -7,6 +7,7 @@ import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Link } from "react-router-dom";
 // import Comments from "../comments/Comments";
 import { useState } from "react";
+import Comments from "../comments/Comments";
 
 const Post = ({ post }) => {
   const [commentOpen, setCommentOpen] = useState(false);
@@ -50,7 +51,7 @@ const Post = ({ post }) => {
             Share
           </div>
         </div>
-        {/* {commentOpen && <Comments />} */}
+        {commentOpen && <Comments />}
       </div>
     </div>
   );
