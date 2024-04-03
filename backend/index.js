@@ -1,12 +1,14 @@
-import Express from "express";
+import express from "express";
 import colors from "colors";
 import authRoutes from "./routes/auth.js";
 import postRoutes from "./routes/posts.js";
 import userRoutes from "./routes/users.js";
 import commentRoutes from "./routes/comments.js";
 import likeRoutes from "./routes/likes.js";
+const app = express();
 
-const app = Express();
+//middlewares
+app.use(express.json);
 
 app.use("/api/users", userRoutes);
 app.use("/api/posts", postRoutes);
